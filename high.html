@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Second</title>
+    <link rel="stylesheet" href="css/high.css">
+    <link rel="stylesheet" href="css/icono_icons.css">
+</head>
+<body>
+   <div class="container">
+       <form name="main" action="" onsubmit="return validate">
+        <i class="fas fa-times-circle" id="icon"></i>
+        <h2>Create an account to view this page</h2>
+        <p>Already have an account? <a href="#">Log in</a></p>
+
+            <div class="name">
+                <p>First Name <br> 
+                    <input id="par1" type="text" placeholder="First Name">
+                </p>
+                <p>Last Name <br>
+                    <input id="par2" type="text" placeholder="Last Name">
+                </p>
+            </div>
+            <p id="email">Email <br>
+                <input id="par3" type="text" placeholder="Enter your email address">
+            </p>
+            <p id="password">password
+                <input id="par4" type="text" placeholder="Input your password">
+            </p>
+            <div>
+                <span>
+                    <input type="checkbox" name="" id="">
+                    show password</span>
+            </div>
+        <h5>By signing up you agree to our <a href="#">Terms</a> and <a href="#">Privacy policy</a></h5>
+
+        <button id="mail">Enter your email Address</button>
+
+
+        <button id="main">submit</button>
+
+        <small>Or sign up with</small>
+
+        <span>
+            <button id="facebook"> <i class="fab fa-facebook-f"></i> </button>
+            <button id="twitter"> <i class="fab fa-twitter"></i> </button>
+        </span>
+    </form>
+   </div> 
+   <script>
+      // function validate(){
+           //let firstNameValue = document.forms["main"]["firstname"].value;
+           //if(firstNameValue == ""){
+            //   alert("first Name must be filled out")
+        //   }
+      // }
+
+      document.getElementById('main').onclick = function(event){
+          event.preventDefault()
+          var firstNameValue = document.getElementById('name').value;
+          var errorBox = document.getElementById('errormsg');
+          //check if the first name input is empty
+          if( firstNameValue == ""){
+              errorBox.style.color = 'gold'
+              errorBox.innerText = "Name must be filled out"
+          } else if( firstNameValue.length < 8){
+              errorBox.style.backgroundColor = 'white'
+              errorBox.style.color = 'gold'
+              errorBox.innerText = "Name must be more than 8 character"
+          } else{
+              errorBox.style.backgroundColor = 'white'
+              errorBox.classList.add('success')
+              errorBox.innerText = "Success Name is valid"
+          }
+      }
+
+      //function to show password
+      function showPassword(){
+          var pwd = document.getElementById('')
+      }
+   </script>
+</body>
+</html>
