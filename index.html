@@ -1,13 +1,36 @@
----
-layout: presentation
----
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Alphabet</title>
+	    <meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link href="css/styles.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+	<!-- container elements or grouping elements-->
+	<!-- div and span-->
+	<!-- div: groups elements at block level-->
+	<!-- span: groups elements inline-->
+	 <div>
+		<h1> Alphabet</h1>
+		<hr>
+		<p id="par1" class="green"> 
+			<em>
+				Google was  founded  by Larry Page and Sergey Brin  while they were <abbr title="Doctor"> <u>Ph.D. students</u> </abbr> at <b>Stanford University.</b>
+		</em></p>
+	
+	
+	<p id="par2" class="green"><u>Larry Page</u></p> 
+	<p id="par3" class="red"></p><u>Sergey Brin</u></p>
+	</div>
+	
+	</body>
 
-{% for post in site.posts reversed %}
-	{% include slide.html %}
-	<div class="page-break"></div>
-{% endfor %}
-{% unless site.simple-slideshow %}
-{% if site.overview %}
-<section id="overview" class="step" {% for attr in site.overview-data %} data-{{attr[0]}}="{{attr[1]}}"{% endfor %}></section>
-{% endif %}
-{% endunless %}
+
+ 
+
+
+
+
+
+</html>
